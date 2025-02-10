@@ -19,7 +19,7 @@ const vaultProgram: ConditionalVaultClient =
   ConditionalVaultClient.createClient({ provider });
 const ammProgram: AmmClient = AmmClient.createClient({ provider });
 
-const USDC = new PublicKey("CRWxbGNtVrTr9FAJX6SZpsvPZyi9R7VetuqecoZ1jCdD");
+const USDC = new PublicKey("ABizbp4pXowKQJ1pWgPeWPYDfSKwg34A7Xy1fxTu7No9");
 
 async function main() {
   const outcomeQuestionId = sha256(
@@ -138,7 +138,7 @@ async function main() {
   console.log("AMM");
   console.log(amm);
 
-  return;
+  // return;
 
   let storedAmm: Amm | null = await ammProgram.fetchAmm(amm);
   console.log(storedAmm);

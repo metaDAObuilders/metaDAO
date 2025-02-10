@@ -2,7 +2,7 @@ import * as anchor from "@coral-xyz/anchor";
 import { MEMO_PROGRAM_ID } from "@solana/spl-memo";
 import * as token from "@solana/spl-token";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-import { AutocratClient } from "@metadaoproject/futarchy-ts";
+import { AutocratClient } from "@metadaoproject/futarchy/v0.3";
 
 const { PublicKey, Keypair, SystemProgram } = anchor.web3;
 const { BN, Program } = anchor;
@@ -190,14 +190,14 @@ async function main() {
 
   // Sleep for review
   console.log("Sleeping for 60s, press ctrl + c to cancel");
-  await new Promise((f) => setTimeout(f, 60000));
+  await new Promise((f) => setTimeout(f, 5000));
 
-  const dao = new PublicKey("DM3sz2qH5LS5KHKpiwZVXNe69YeM3bJzsmNs5VmKLHEv");
+  const dao = new PublicKey("33Pi6Dxur8Q87K7DmG8JAdZoiTwSRi2HCP6ZjLAPn2sE");
   const storedDao = await autocratClient.getDao(dao);
 
   const proposal = await autocratClient.initializeProposal(
     dao,
-    "http://google.com",
+    "http://lfg.com",
     ix,
     storedDao.minBaseFutarchicLiquidity,
     storedDao.minQuoteFutarchicLiquidity

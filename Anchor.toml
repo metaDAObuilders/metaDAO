@@ -1,6 +1,6 @@
 [scripts]
 test = "npx mocha --import=tsx tests/main.test.ts"
-propose = "yarn run ts-node scripts/initializeProposal.ts"
+propose = "yarn run tsx scripts/initializeProposal.ts"
 initialize-dao = "yarn run ts-node scripts/initializeDao.ts"
 finalize = "yarn run ts-node scripts/finalizeProposal.ts"
 metadata = "yarn run ts-node scripts/uploadMetadata.ts"
@@ -10,6 +10,7 @@ attach-metadata = "yarn run ts-node scripts/attachMetadata.ts"
 reclaim-tokens = "yarn run ts-node scripts/reclaimTokens.ts"
 merge-tokens = "yarn run ts-node scripts/mergeTokens.ts"
 setup-devnet = "yarn run tsx scripts/setupDevnet.ts"
+resolve-outcome = "yarn run tsx scripts/resolveOutcome.ts"
 add-v03-metadata = "yarn run tsx scripts/addV03Metadata.ts"
 
 [toolchain]
