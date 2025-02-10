@@ -5,7 +5,7 @@ use anchor_spl::metadata::{
 };
 use anchor_spl::{
     associated_token::AssociatedToken,
-    token::{self, Burn, Mint, MintTo, Token, TokenAccount, Transfer},
+    token::{self, Burn, Mint, MintTo, Token, TokenAccount, TransferChecked},
 };
 
 pub mod error;
